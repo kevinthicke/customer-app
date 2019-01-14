@@ -10,19 +10,28 @@ const aCustomer = [{
     email: 'carljohnson@gmail.com'
 },
 {
-    name: 'Rychard Feymann',
+    name: 'Richard Feymann',
     dni: '43257921G',
     email: 'rychardfeymann@gmail.com'
+},
+{
+    name: 'Walter White',
+    dni: '43212354X',
+    email: 'walterwhite@gmail.com'
 }]
+
+const style = {
+    button: { fontSize: '14pt'}
+}
 
 
 class CustomersContainer extends Component {
     render() {
         const body = (
             <div>
-                <CustomerList customerList={aCustomer}/>
+                <CustomerList customerList={aCustomer} urlPath={'/customers'}/>
                 <CustomerActions>
-                    <Button bsStyle="success">New Customer</Button>
+                    <Button style={style.button} bsStyle="success">New Customer</Button>
                 </CustomerActions>
             </div>
         )
